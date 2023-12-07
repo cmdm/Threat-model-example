@@ -16,7 +16,252 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.1.2",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 81.99999999999963,
+              "y": 46.00000000000034
+            },
+            "size": {
+              "width": 280,
+              "height": 240
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Pen Trust Boundary"
+              }
+            },
+            "id": "3dcc1cc6-ae7c-4e0b-aff6-08ae2f2aebc9",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Pen Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 480,
+              "y": 45.99999999999966
+            },
+            "size": {
+              "width": 280,
+              "height": 240
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Dialyser Trust Boundary"
+              }
+            },
+            "id": "4fe8fa34-48b4-4ea8-807a-04fd693a4aa2",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Dialyser Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 150,
+              "y": 170
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Pen Process"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b0341eab-ac72-48d1-a5d7-1981c9617e13",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "Pen Process",
+              "description": "Process computing dose",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 240,
+              "y": 90
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Pen Com Process"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b6f249f2-cfd9-47e4-95ff-d29b5f2e7426",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "Pen Com Process",
+              "description": "Process handling BLE communication",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SPI Data Flow",
+              "description": "SPI data flow b/w two processes",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "e4bc68ce-f39e-4980-a905-430db2a941d4",
+            "source": {
+              "cell": "b0341eab-ac72-48d1-a5d7-1981c9617e13"
+            },
+            "target": {
+              "cell": "b6f249f2-cfd9-47e4-95ff-d29b5f2e7426"
+            },
+            "vertices": [
+              {
+                "x": 220,
+                "y": 150
+              }
+            ],
+            "labels": [
+              "SPI Data Flow"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "BLE Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "abaabd90-487f-459b-865d-a47026bb53bf",
+            "source": {
+              "cell": "b6f249f2-cfd9-47e4-95ff-d29b5f2e7426"
+            },
+            "target": {
+              "cell": "420d1fcd-fa4c-4197-a902-86dd3f9e9110"
+            },
+            "labels": [
+              "BLE Data Flow"
+            ],
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 580,
+              "y": 110
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Dialyser Process"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "420d1fcd-fa4c-4197-a902-86dd3f9e9110",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "Dialyser Process",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          }
+        ],
+        "format": "td"
       }
     ],
     "diagramTop": 1,
